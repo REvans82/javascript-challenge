@@ -22,10 +22,10 @@ function ufo_data(data){
 // Create a function for filter
 function handleClick(){
     var date = d3.select("#datetime").property("value");
-    var filteredData = tableData;
+    let filteredData = tableData;
     // Condition to grab data using the date
     if (date){
-        filteredData = filteredData.filter(row => row.datatime === date);
+        filteredData = filteredData.filter(row => row.datetime === date);
     }
     ufo_data(filteredData);
 }
